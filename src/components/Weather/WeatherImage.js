@@ -8,6 +8,7 @@ const WEATHER_IMAGE_URLS = {
     wetCat: "https://i.pinimg.com/originals/26/97/01/269701dde3a23c7065921213e05c9aee.jpg",
     cloudyDog: "https://image.shutterstock.com/image-photo/clouds-shaped-like-wolf-260nw-1106311649.jpg",
     snowyCat: "https://i.ytimg.com/vi/awmehLxoFV0/maxresdefault.jpg",
+    showerCat: "https://blog.petloverscentre.com/wp-content/uploads/2021/04/How-to-bathe-a-cat.png",
     other: "https://classroomclipart.com/images/gallery/Clipart/People/boy-confused-as-to-directions-clipart-6163.jpg"
 }
   
@@ -21,7 +22,8 @@ const WeatherImage = ({ weather }) => {
         else if(weather?.IconPhrase?.toLowerCase().includes('cloud')) setImageDisplay(WEATHER_IMAGE_URLS.cloudyDog)
         else if(weather?.IconPhrase?.toLowerCase().includes('snow')) setImageDisplay(WEATHER_IMAGE_URLS.snowyCat)
         else if(weather?.IconPhrase?.toLowerCase().includes('cold')) setImageDisplay(WEATHER_IMAGE_URLS.warmDog)    
-        else if(weather?.IconPhrase?.toLowerCase().includes('sun')) setImageDisplay(WEATHER_IMAGE_URLS.sunnyDog)    
+        else if(weather?.IconPhrase?.toLowerCase().includes('sun')) setImageDisplay(WEATHER_IMAGE_URLS.sunnyDog)
+        else if(weather?.IconPhrase?.toLowerCase().includes('sun')) setImageDisplay(WEATHER_IMAGE_URLS.showerCat)
         else  setImageDisplay(WEATHER_IMAGE_URLS.other)    
     },[weather])
 
