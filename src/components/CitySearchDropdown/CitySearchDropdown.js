@@ -13,7 +13,7 @@ const DEFAULT_OPTIONS = [
   { cityName: 'shanghai', cityKey: '106577' },
 ];
 
-const CitySearchDropdown = ({setCityKey, setCityName}) => {
+const CitySearchDropdown = ({ setCityKey, setCityName }) => {
 
   const [options, setOptions] = useState(DEFAULT_OPTIONS); // dropdown options
   const [value, setValue] = useState(''); // 
@@ -30,7 +30,7 @@ const CitySearchDropdown = ({setCityKey, setCityName}) => {
       }
     }
 
-    if (search === ''){
+    if (search === '') {
       setCityKey('')
       setOptions(DEFAULT_OPTIONS)
     }
@@ -49,7 +49,7 @@ const CitySearchDropdown = ({setCityKey, setCityName}) => {
     })
 
     // Alternative
-    // setCityKey(options.find(option=>option.cityName === value).cityKey)
+    // setCityKey(options.find(option=>(option.cityName === value).cityKey)
 
   }, [value])
 
@@ -70,8 +70,6 @@ const CitySearchDropdown = ({setCityKey, setCityName}) => {
           setSearch(newInputValue);
         }}
         renderInput={(params) => <TextField {...params} label="Search City" />}
-
-
       />
     </div>
 

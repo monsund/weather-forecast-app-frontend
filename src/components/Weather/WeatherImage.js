@@ -22,8 +22,8 @@ const WeatherImage = ({ weather }) => {
         else if(weather?.IconPhrase?.toLowerCase().includes('cloud')) setImageDisplay(WEATHER_IMAGE_URLS.cloudyDog)
         else if(weather?.IconPhrase?.toLowerCase().includes('snow')) setImageDisplay(WEATHER_IMAGE_URLS.snowyCat)
         else if(weather?.IconPhrase?.toLowerCase().includes('cold')) setImageDisplay(WEATHER_IMAGE_URLS.warmDog)    
-        else if(weather?.IconPhrase?.toLowerCase().includes('sun')) setImageDisplay(WEATHER_IMAGE_URLS.sunnyDog)
-        else if(weather?.IconPhrase?.toLowerCase().includes('sun')) setImageDisplay(WEATHER_IMAGE_URLS.showerCat)
+        else if(weather?.IconPhrase?.toLowerCase().includes('sun')) setImageDisplay(WEATHER_IMAGE_URLS.sunnyDog)    
+        else if(weather?.IconPhrase?.toLowerCase().includes('shower')) setImageDisplay(WEATHER_IMAGE_URLS.showerCat)    
         else  setImageDisplay(WEATHER_IMAGE_URLS.other)    
     },[weather])
 

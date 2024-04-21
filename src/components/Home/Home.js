@@ -40,7 +40,6 @@ const Home = () => {
     setDate(null)
   }, [cityKey])
 
-  console.log('cityKey and date', cityKey, date)
   return (
     <div className="container">
       <CitySearchDropdown cityKey={cityKey} setCityKey={setCityKey} setCityName={setCityName} />
